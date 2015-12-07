@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Severi Twinnings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_not_available">App non disponibile</string>
+    <string name="action_websearch">Web Search</string>
+
+    <string name="nav_item_tutte">Tutte le notizie</string>
+    <string name="nav_item_generale"> Generale </string>
+    <string name="nav_item_focus_palestina">Focus Palestina</string>
+    <string name="nav_item_focus_usa">Focus USA</string>
+    <string name="nav_item_americani_italia">Studenti americani in Italia</string>
+    <string name="nav_item_italiani_america">Studenti italiani in America</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_tutte</item>
+        <item>@string/nav_item_generale</item>
+        <item>@string/nav_item_focus_palestina</item>
+        <item>@string/nav_item_focus_usa</item>
+        <item>@string/nav_item_americani_italia</item>
+        <item>@string/nav_item_italiani_america</item>
+    </string-array>
+
+    <string name="title_tutte">Tutte le notizie</string>
+    <string name="title_generale">Generale</string>
+    <string name="title_focus_palestina">Focus Palestina</string>
+    <string name="title_focus_usa">Focus USA</string>
+    <string name="title_americani_italia">Studenti americani in Italia</string>
+    <string name="title_italiani_america">Studenti italiani in America</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
