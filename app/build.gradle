@@ -8,8 +8,8 @@ android {
         applicationId "com.app.gabriele.severitwinnings"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 14
-        versionName "2.3"
+        versionCode 16
+        versionName "2.5"
     }
     buildTypes {
         release {

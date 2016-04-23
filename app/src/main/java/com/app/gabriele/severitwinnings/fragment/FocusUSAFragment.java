@@ -26,7 +26,6 @@ public class FocusUSAFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -37,6 +36,9 @@ public class FocusUSAFragment extends Fragment {
         try{
             do_task();
         }catch (Exception e){
+            //In caso di connessione assente, deve apparire un messaggio di errore che consente
+            //all'utente di uscire dall'applicazione oppure riprovare ad aprire l'articolo (o l'applicazione)
+
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
             builder.setTitle("Connessione di rete assente");
@@ -67,16 +69,6 @@ public class FocusUSAFragment extends Fragment {
         // Inflate the layout for this fragment
         return rootView;
     }
-
-    /**
-     * Added in last version (after crash webview)
-     * Date: 17/11/2015
-     */
-  //  @Override
-  //  public void onDestroyView(){
-  //      super.onDestroyView();
-  //  }
-
 
     public void do_task(){
         task.execute("https://severitwinnings.wordpress.com/category/focus-usa/feed");

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <LinearLayout android:id ="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:gravity = "center_vertical|center_horizontal"
+            android:src="@drawable/stemma"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:gravity="center_vertical|center_horizontal"
+        android:text = "Prova della prova a corning funziona davvero oppure no"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/textprecategory"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/text2"
+        android:gravity="center_vertical|left"
+        android:text = "CATEGORIA : "
+        android:textStyle="bold"
+        android:textSize="9dp"
+        android:textColor="@color/primary_dark_material_light"
+        />
+
+    <TextView
+        android:id="@+id/textcategory"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/text2"
+        android:layout_toRightOf="@+id/textprecategory"
+        android:gravity="center_vertical|left"
+        android:text = "Studenti americani in Italia"
+        android:textStyle="bold"
+        android:textSize="9dp"
+        android:textColor="@color/primary_dark_material_light"
+        />
+
+
+    <TextView
+        android:id="@+id/textdate"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@id/text2"
+        android:layout_toRightOf="@+id/textcategory"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical|right"
+        android:text = "DATA: 01/01/2016"
+        android:textStyle="bold"
+        android:textSize="9dp"
+        android:textColor="@color/primary_dark_material_light"
+        />
+
+</RelativeLayout>
+

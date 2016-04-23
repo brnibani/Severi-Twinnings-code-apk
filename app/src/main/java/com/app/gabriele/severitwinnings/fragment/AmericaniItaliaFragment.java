@@ -1,30 +1,15 @@
 package com.app.gabriele.severitwinnings.fragment;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.Toast;
-import com.app.gabriele.severitwinnings.DetailsActivity;
-import com.app.gabriele.severitwinnings.GetRSSDataTask;
-import com.app.gabriele.severitwinnings.data.RssAtomItem;
-import com.app.gabriele.severitwinnings.listeners.ListListener;
-import com.app.gabriele.severitwinnings.util.RssAtomReader;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.app.gabriele.severitwinnings.GetRSSDataTask;
 
 import severitwinnings.gabriele.app.com.severitwinnings.R;
 
@@ -36,29 +21,22 @@ public class AmericaniItaliaFragment extends Fragment {
         // Required empty public constructor
     }
 
-//    public AmericaniItaliaFragment(Activity act) {
- //       a = act;
- //   }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Set view
-      //  a.setContentView(R.layout.progress);
-      //  GetRSSDataTask task = new GetRSSDataTask();
-      //  task.execute("https://severitwinnings.wordpress.com/feed/");
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_tutte, container, false);
         task = new GetRSSDataTask(getActivity(),rootView);
         try{
             do_task();
         }catch(Exception e){
+            //In caso di connessione assente, deve apparire un messaggio di errore che consente
+            //all'utente di uscire dall'applicazione oppure riprovare ad aprire l'articolo (o l'applicazione)
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -92,8 +70,6 @@ public class AmericaniItaliaFragment extends Fragment {
         // Inflate the layout for this fragment
         return rootView;
     }
-
-
 
     public void do_task(){
         task.execute("https://severitwinnings.wordpress.com/category/studenti-americani-in-italia/feed");

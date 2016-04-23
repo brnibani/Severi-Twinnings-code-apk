@@ -2,25 +2,14 @@ package com.app.gabriele.severitwinnings.fragment;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.app.gabriele.severitwinnings.GetRSSDataTask;
-import com.app.gabriele.severitwinnings.data.RssAtomItem;
-import com.app.gabriele.severitwinnings.listeners.ListListener;
-import com.app.gabriele.severitwinnings.util.RssAtomReader;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import severitwinnings.gabriele.app.com.severitwinnings.R;
 
@@ -35,8 +24,6 @@ public class TutteFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -47,6 +34,8 @@ public class TutteFragment extends Fragment {
         try{
             do_task();
         }catch(Exception e){
+            //In caso di connessione assente, deve apparire un messaggio di errore che consente
+            //all'utente di uscire dall'applicazione oppure riprovare ad aprire l'articolo (o l'applicazione)
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 

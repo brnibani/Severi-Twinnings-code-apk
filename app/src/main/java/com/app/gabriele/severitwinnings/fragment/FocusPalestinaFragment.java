@@ -25,7 +25,6 @@ public class FocusPalestinaFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -36,6 +35,9 @@ public class FocusPalestinaFragment extends Fragment {
         try{
             do_task();
         }catch (Exception e){
+            //In caso di connessione assente, deve apparire un messaggio di errore che consente
+            //all'utente di uscire dall'applicazione oppure riprovare ad aprire l'articolo (o l'applicazione)
+
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
             builder.setTitle("Connessione di rete assente");

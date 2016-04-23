@@ -12,9 +12,7 @@ import severitwinnings.gabriele.app.com.severitwinnings.R;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by Ravi Tamada on 12-03-2015.
- */
+
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();
     private LayoutInflater inflater;

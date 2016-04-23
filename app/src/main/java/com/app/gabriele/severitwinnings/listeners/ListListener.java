@@ -9,17 +9,17 @@ import android.net.Uri;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.app.gabriele.severitwinnings.data.RssAtomItem;
+import com.app.gabriele.severitwinnings.data.Articolo;
 import com.app.gabriele.severitwinnings.DetailsActivity;
 
 public class ListListener implements OnItemClickListener {
 
     // List item's reference
-    List<RssAtomItem> listItems;
+    List<Articolo> listItems;
     // Calling activity reference
     Activity activity;
 
-    public ListListener(List<RssAtomItem> aListItems, Activity anActivity) {
+    public ListListener(List<Articolo> aListItems, Activity anActivity) {
         listItems = aListItems;
         activity  = anActivity;
     }
@@ -31,6 +31,7 @@ public class ListListener implements OnItemClickListener {
         i.putExtra("title", listItems.get(pos).getTitle());
         i.putExtra("content:encoded", listItems.get(pos).getContent());
         i.putExtra("category", listItems.get(pos).getCategory());
+        i.putExtra("date", listItems.get(pos).getDate());
         i.putExtra("wfw:commentRss", listItems.get(pos).getLinkComment());
         i.putExtra("slash:comments", listItems.get(pos).getNumComments());
         activity.startActivity(i);
